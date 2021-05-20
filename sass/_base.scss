@@ -1,0 +1,45 @@
+//BUTTON
+//2 repetitive style button here
+.btn-base{
+	border:none;
+	outline:none;
+	border-radius:4px;
+	background-color:$lime;
+	color:$light;
+  cursor: pointer;
+}
+
+//TEXT-REP
+
+//LINK
+
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+footer,
+main,
+aside,
+section,
+nav,
+ul,
+li,
+p,
+input,
+form,
+button,
+label,
+i,
+a,
+div,img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}

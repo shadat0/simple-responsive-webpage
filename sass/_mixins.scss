@@ -1,0 +1,26 @@
+//FLEX
+
+@mixin flex($direction: row, $align-items: center, $justify-content: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+//GRID
+
+
+//FONT
+
+//MEDIA QUERY
+@mixin tablet{
+  @media screen and (max-width:768px) {
+    @content
+  }
+}
+
+@mixin mobile{
+  @media screen and (max-width:280px) {
+    @content
+  }
+}

@@ -1,0 +1,136 @@
+@import 'utils';
+@import 'settings';
+@import 'base';
+@import 'mixins';
+
+//repitivi
+.siteheader{
+    background-color: $light;
+    height:80px;
+    @include flex($justify-content:space-between);
+    padding: 0.5rem calc((100vw-1200px)/2);
+    z-index: 10;
+    position:relative;
+
+    &__logo__sitelogo{
+        color:$dark;
+        cursor: pointer;
+        font-size: 2rem;
+    }
+
+    &__responsive-bars{
+        @include tablet{
+            color:$dark;
+            opacity: 1;
+            position: absolute;
+            top: 22px;
+            right: 20px;
+            font-size: 2rem;
+        }
+    }
+    &__menu{
+        @include tablet{
+            display: none;
+        }
+        &__links{
+            color: $dark;
+        &:hover{
+            color:$lime;
+            transition: all 0.3s ease;
+        }
+        }
+        .as-button{
+            padding: 12px 24px;
+            margin-left:16px;
+            color:$light;
+        }
+        .as-button:hover{
+            background: $orangeRed;
+            transition: all 0.3s ease;
+        }
+
+    }
+}
+
+//hero-section
+.hero{
+    background-color: $light;
+    &__container{
+        grid-template-columns: 1fr 1fr;
+        height:90vh;
+        z-index: 1;
+        padding-right: 24px;
+        padding-left:24px;
+        @include tablet{
+            grid-template-columns: 1fr;
+            height: 100%;
+        }
+        &--left{
+            width:100%;
+            line-height: 1.2;
+            @include tablet{
+                padding: 5rem 0;
+            }
+            @include mobile{
+                line-height: 1.5 ;
+            }
+        }
+
+        &--left h1{
+            font-size: 4rem;
+            color:$lime;
+
+            @include mobile{
+                font-size: 1.5rem;
+            }
+        }
+
+        &--left h2 {
+            font-size: 4rem;
+            color:$dark;
+
+            @include mobile{
+                font-size: 2rem;
+            }
+        }
+
+        &--left p{
+            font-size: 2rem;
+            color:$dark;
+            margin-top: 1rem;
+            font-weight: 700;
+
+            @include mobile{
+                font-size:1.5rem;
+            }
+        }
+        &--btn {
+            font-size: 1rem;
+            padding: 14px 32px;
+            margin-top: 2rem;
+            position: relative;
+            transition: all 0.3s;
+            }
+        &--btn a {
+            position: relative;
+            z-index: 2;
+            color: $light;
+            }
+
+    &--btn:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: $orangeRed;
+      transition: all 0.3s;
+      border-radius: 4px;
+    }
+
+    &--btn:hover:after {
+      width: 100%;
+    }
+    }
+}
